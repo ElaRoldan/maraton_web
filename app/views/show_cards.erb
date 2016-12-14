@@ -1,0 +1,12 @@
+<h3> Ahi te van las preguntas de <%= @topic.topic %></h3>
+<br>
+  <% @card_to_play.each do |card| %>
+    <p> <%= card.question %> </p>
+    <form action="/verify/<%= @round.id %>" method="post">
+    <input type="radio" name="card[<%= card.id %>]" value="1"><%= card.option1 %><br>
+    <input type="radio" name="card[<%= card.id %>]" value="2"><%= card.option2 %><br>
+    <input type="radio" name="card[<%= card.id %>]" value="3"><%= card.correct %> <br><br>
+  <% end %> 
+  <input type="submit">
+</form>
+<%= @round.id %>

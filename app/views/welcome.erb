@@ -1,0 +1,15 @@
+<h1>Bienvenido a Maraton</h1>
+<h3>¿Que deseas hacer?</h3>
+<%=@user.mail %>
+</br>
+<div>
+  <a href="choose_deck/<%=@user.id %>">Escoger un deck para jugar</a>
+  <br>
+  <a href="/stadistics/<%=@user.id %>">Ver tus estadisticas</a>
+  <br>
+</div>
+<br>
+<br>
+<br>
+<form action="/logout" method="get">
+<input type="submit" value="Log out">

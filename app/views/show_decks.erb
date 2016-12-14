@@ -1,0 +1,11 @@
+<h3>Estos son los temas que tenemos para ti</h3>
+<% @decks.each do |deck| %>
+  <ul>
+    <li><a href='/cards/<%=deck.id %>/<%=@user %>'><%=deck.topic %></a></li>
+  </ul>  
+<% end %>
+<br>
+<br>
+<br>
+<a href="/welcome">Regresar</a>
+
